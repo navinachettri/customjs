@@ -54,6 +54,9 @@ $('#activity-stream').on('DOMNodeRemoved', function(event) {
 $( activity ).masonry( 'reloadItems' );
 $( activity ).masonry( 'layout' );
 });
-
+$( document ).ajaxComplete(function() {
+$( activity ).masonry( 'reloadItems' );
+$( activity ).masonry( 'layout' );
+});
 });
 
